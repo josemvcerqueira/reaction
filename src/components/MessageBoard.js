@@ -8,11 +8,12 @@ const MessageBoard = () => {
 	return (
 		<div>
 			{messages.map(messageItem => {
-				const { id, text, timestamp } = messageItem;
+				const { id, text, timestamp, username } = messageItem;
 				return (
 					<div key={id}>
 						<h4>{new Date(timestamp).toLocaleString()}</h4>
 						<p>{text}</p>
+						<h4>- {username}</h4>
 					</div>
 				);
 			})}
